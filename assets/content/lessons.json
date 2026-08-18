@@ -1,0 +1,270 @@
+{
+  "modules": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "description": "Build confidence with essential beginner structures, daily language, and first study routines.",
+      "level": "Beginner",
+      "lessons": [
+        {
+          "id": "verb_to_be",
+          "moduleId": "foundations",
+          "title": "Verb to Be",
+          "level": "Beginner",
+          "skills": ["Grammar", "Speaking"],
+          "objectives": [
+            "Use am, is, and are in simple sentences.",
+            "Introduce yourself and describe people.",
+            "Identify affirmative and negative forms."
+          ],
+          "explanation": "The verb to be is used to talk about identity, age, origin, and basic descriptions. We use am with I, is with he, she, and it, and are with you, we, and they.",
+          "examples": [
+            "I am a student.",
+            "She is from Brazil.",
+            "They are ready for class."
+          ],
+          "vocabulary": [
+            {
+              "id": "v_be_student",
+              "word": "student",
+              "translation": "estudante",
+              "example": "I am a student.",
+              "lessonId": "verb_to_be"
+            },
+            {
+              "id": "v_be_teacher",
+              "word": "teacher",
+              "translation": "professor(a)",
+              "example": "He is a teacher.",
+              "lessonId": "verb_to_be"
+            },
+            {
+              "id": "v_be_ready",
+              "word": "ready",
+              "translation": "pronto(a)",
+              "example": "We are ready.",
+              "lessonId": "verb_to_be"
+            },
+            {
+              "id": "v_be_friend",
+              "word": "friend",
+              "translation": "amigo(a)",
+              "example": "She is my friend.",
+              "lessonId": "verb_to_be"
+            },
+            {
+              "id": "v_be_from",
+              "word": "from",
+              "translation": "de, vindo de",
+              "example": "They are from Recife.",
+              "lessonId": "verb_to_be"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "ex_be_1",
+              "type": "multipleChoice",
+              "question": "Choose the correct sentence.",
+              "options": ["She are my teacher.", "She is my teacher.", "She am my teacher."],
+              "correctAnswer": "She is my teacher.",
+              "feedback": "Use is with she.",
+              "skill": "Grammar"
+            },
+            {
+              "id": "ex_be_2",
+              "type": "fillBlank",
+              "question": "Complete: They ___ at home.",
+              "options": [],
+              "correctAnswer": "are",
+              "acceptedAnswers": ["are"],
+              "feedback": "Use are with they in the present form of the verb to be.",
+              "skill": "Grammar"
+            },
+            {
+              "id": "ex_be_3",
+              "type": "openQuestion",
+              "question": "Write a short sentence introducing yourself with the verb to be.",
+              "options": [],
+              "correctAnswer": "i am",
+              "acceptedAnswers": ["i am", "i'm"],
+              "feedback": "A strong answer starts with I am or I'm plus personal information.",
+              "skill": "Speaking"
+            }
+          ]
+        },
+        {
+          "id": "present_simple",
+          "moduleId": "foundations",
+          "title": "Present Simple",
+          "level": "Elementary",
+          "skills": ["Grammar", "Reading"],
+          "objectives": [
+            "Describe habits and routines in the present.",
+            "Recognize third person singular forms.",
+            "Build simple negative and affirmative sentences."
+          ],
+          "explanation": "We use the present simple to talk about routines, facts, and repeated actions. In the third person singular, many verbs take s or es, such as works, studies, and watches.",
+          "examples": [
+            "I study English every day.",
+            "My brother works in the morning.",
+            "We do not watch TV at lunch."
+          ],
+          "vocabulary": [
+            {
+              "id": "v_ps_every_day",
+              "word": "every day",
+              "translation": "todos os dias",
+              "example": "I read every day.",
+              "lessonId": "present_simple"
+            },
+            {
+              "id": "v_ps_work",
+              "word": "work",
+              "translation": "trabalhar",
+              "example": "She works downtown.",
+              "lessonId": "present_simple"
+            },
+            {
+              "id": "v_ps_study",
+              "word": "study",
+              "translation": "estudar",
+              "example": "They study at night.",
+              "lessonId": "present_simple"
+            },
+            {
+              "id": "v_ps_watch",
+              "word": "watch",
+              "translation": "assistir",
+              "example": "He watches short videos.",
+              "lessonId": "present_simple"
+            },
+            {
+              "id": "v_ps_usually",
+              "word": "usually",
+              "translation": "geralmente",
+              "example": "We usually eat at home.",
+              "lessonId": "present_simple"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "ex_ps_1",
+              "type": "multipleChoice",
+              "question": "Choose the correct third person sentence.",
+              "options": ["He study English at night.", "He studies English at night.", "He studying English at night."],
+              "correctAnswer": "He studies English at night.",
+              "feedback": "In the third person singular, study becomes studies.",
+              "skill": "Grammar"
+            },
+            {
+              "id": "ex_ps_2",
+              "type": "fillBlank",
+              "question": "Complete: My mother ___ coffee every morning.",
+              "options": [],
+              "correctAnswer": "drinks",
+              "acceptedAnswers": ["drinks"],
+              "feedback": "Use the verb with s in the third person singular.",
+              "skill": "Grammar"
+            },
+            {
+              "id": "ex_ps_3",
+              "type": "openQuestion",
+              "question": "Write one sentence about your routine using the present simple.",
+              "options": [],
+              "correctAnswer": "i",
+              "acceptedAnswers": ["i", "i study", "i work", "i wake up", "i usually"],
+              "feedback": "A good answer starts with I and describes a real routine.",
+              "skill": "Reading"
+            }
+          ]
+        },
+        {
+          "id": "daily_routine_vocabulary",
+          "moduleId": "foundations",
+          "title": "Daily Routine Vocabulary",
+          "level": "Beginner",
+          "skills": ["Vocabulary", "Reading", "Speaking"],
+          "objectives": [
+            "Learn common daily routine words and phrases.",
+            "Connect vocabulary to simple personal routines.",
+            "Use routine expressions in short speaking practice."
+          ],
+          "explanation": "Daily routine vocabulary helps students talk about common actions from morning to night. These words often appear with present simple sentences and time expressions.",
+          "examples": [
+            "I wake up at 6:30.",
+            "She goes to work by bus.",
+            "We have dinner at 7:00."
+          ],
+          "vocabulary": [
+            {
+              "id": "v_dr_wake_up",
+              "word": "wake up",
+              "translation": "acordar",
+              "example": "I wake up early on weekdays.",
+              "lessonId": "daily_routine_vocabulary"
+            },
+            {
+              "id": "v_dr_get_dressed",
+              "word": "get dressed",
+              "translation": "se vestir",
+              "example": "He gets dressed quickly.",
+              "lessonId": "daily_routine_vocabulary"
+            },
+            {
+              "id": "v_dr_go_to_work",
+              "word": "go to work",
+              "translation": "ir para o trabalho",
+              "example": "They go to work at 8:00.",
+              "lessonId": "daily_routine_vocabulary"
+            },
+            {
+              "id": "v_dr_have_dinner",
+              "word": "have dinner",
+              "translation": "jantar",
+              "example": "We have dinner together.",
+              "lessonId": "daily_routine_vocabulary"
+            },
+            {
+              "id": "v_dr_go_to_bed",
+              "word": "go to bed",
+              "translation": "ir para a cama",
+              "example": "I go to bed before 11:00.",
+              "lessonId": "daily_routine_vocabulary"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "ex_dr_1",
+              "type": "multipleChoice",
+              "question": "Which phrase means 'jantar'?",
+              "options": ["have dinner", "wake up", "go to bed"],
+              "correctAnswer": "have dinner",
+              "feedback": "Have dinner is the routine phrase for jantar.",
+              "skill": "Vocabulary"
+            },
+            {
+              "id": "ex_dr_2",
+              "type": "fillBlank",
+              "question": "Complete: I ___ up at 7:00 every day.",
+              "options": [],
+              "correctAnswer": "wake",
+              "acceptedAnswers": ["wake"],
+              "feedback": "The full phrase is wake up.",
+              "skill": "Vocabulary"
+            },
+            {
+              "id": "ex_dr_3",
+              "type": "openQuestion",
+              "question": "Write one daily routine phrase you remember from this lesson.",
+              "options": [],
+              "correctAnswer": "wake up",
+              "acceptedAnswers": ["wake up", "get dressed", "go to work", "have dinner", "go to bed"],
+              "feedback": "Any correct phrase from the lesson counts here.",
+              "skill": "Speaking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
