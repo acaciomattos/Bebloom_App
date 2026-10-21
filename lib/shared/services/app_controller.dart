@@ -3,26 +3,28 @@ import 'package:flutter/foundation.dart';
 import '../../features/exercises/exercise_evaluator.dart';
 import '../models/course_content.dart';
 import '../models/student_progress.dart';
-import '../storage/progress_storage.dart';
+import '../repositories/student_progress_repository.dart';
 import 'content_service.dart';
 
 class AppController extends ChangeNotifier {
   AppController({
     required ContentService contentService,
-    required ProgressStorage progressStorage,
+    required StudentProgressRepository progressRepository,
   })  : _contentService = contentService,
-        _progressStorage = progressStorage;
+        _progressRepository = progressRepository;
 
   final ContentService _contentService;
-  final ProgressStorage _progressStorage;
+  final StudentProgressRepository _progressRepository;
 
   List<CourseModule> _modules = const [];
   StudentProgress _progress = StudentProgress.initial();
 
-  static Future<AppController> bootstrap() async {
+  static Future<AppController> bootstrap({
+    required StudentProgressRepository progressRepository,
+  }) async {
     final controller = AppController(
       contentService: const ContentService(),
-      progressStorage: SharedPreferencesProgressStorage(),
+      progressRepository: progressRepository,
     );
     await controller._initialize();
     return controller;
@@ -30,7 +32,7 @@ class AppController extends ChangeNotifier {
 
   Future<void> _initialize() async {
     _modules = await _contentService.loadModules();
-    _progress = await _progressStorage.loadProgress();
+    _progress = await _progressRepository.load();
   }
 
   List<CourseModule> get modules => _modules;
@@ -189,6 +191,6 @@ class AppController extends ChangeNotifier {
   }
 
   Future<void> _persistProgress() async {
-    await _progressStorage.saveProgress(_progress);
+    await _progressRepository.save(_progress);
   }
 }

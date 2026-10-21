@@ -4,21 +4,21 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/student_progress.dart';
 
-abstract class ProgressStorage {
-  Future<StudentProgress> loadProgress();
+abstract class ProgressCache {
+  Future<StudentProgress?> read();
 
-  Future<void> saveProgress(StudentProgress progress);
+  Future<void> write(StudentProgress progress);
 }
 
-class SharedPreferencesProgressStorage implements ProgressStorage {
+class SharedPreferencesProgressCache implements ProgressCache {
   static const _progressKey = 'student_progress_v1';
 
   @override
-  Future<StudentProgress> loadProgress() async {
+  Future<StudentProgress?> read() async {
     final prefs = await SharedPreferences.getInstance();
     final raw = prefs.getString(_progressKey);
     if (raw == null || raw.isEmpty) {
-      return StudentProgress.initial();
+      return null;
     }
 
     final decoded = jsonDecode(raw) as Map<String, dynamic>;
@@ -26,9 +26,8 @@ class SharedPreferencesProgressStorage implements ProgressStorage {
   }
 
   @override
-  Future<void> saveProgress(StudentProgress progress) async {
+  Future<void> write(StudentProgress progress) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_progressKey, jsonEncode(progress.toJson()));
   }
 }
-

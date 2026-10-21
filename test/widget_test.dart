@@ -1,28 +1,28 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:english_tutor_demo/app.dart';
+import 'package:english_tutor_demo/shared/models/student_progress.dart';
+import 'package:english_tutor_demo/shared/repositories/student_progress_repository.dart';
 import 'package:english_tutor_demo/shared/services/app_controller.dart';
 import 'package:english_tutor_demo/shared/services/content_service.dart';
-import 'package:english_tutor_demo/shared/storage/progress_storage.dart';
-import 'package:english_tutor_demo/shared/models/student_progress.dart';
 
 class _FakeContentService extends ContentService {}
 
-class _FakeProgressStorage implements ProgressStorage {
+class _FakeStudentProgressRepository implements StudentProgressRepository {
   @override
-  Future<StudentProgress> loadProgress() async {
+  Future<StudentProgress> load() async {
     return StudentProgress.initial();
   }
 
   @override
-  Future<void> saveProgress(StudentProgress progress) async {}
+  Future<void> save(StudentProgress progress) async {}
 }
 
 void main() {
   testWidgets('renders the main shell', (tester) async {
     final controller = AppController(
       contentService: _FakeContentService(),
-      progressStorage: _FakeProgressStorage(),
+      progressRepository: _FakeStudentProgressRepository(),
     );
 
     await tester.pumpWidget(EnglishTutorDemoApp(controller: controller));
